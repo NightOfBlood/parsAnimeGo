@@ -20,6 +20,7 @@ main_div_tag = soup.find('div', 'mangas-grid2 position-relative')
 body_all_tag = main_div_tag.find_all('div', 'animes-list-item media')
 count = 0
 with open('result.txt', 'w', encoding="utf-8") as file:
+
     for div in body_all_tag:
         #image
         image = div.find('div', 'anime-grid2-lazy lazy').get('data-original')
